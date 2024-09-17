@@ -1,0 +1,31 @@
+<style>
+    .navbar{
+    height: 5rem;
+    background-color: white;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    .container{
+        flex:1;
+    }
+    .fa-compass{
+        color: red;
+        font-size: 2rem;
+    }
+</style>
+
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+        <div class="navbar-nav ms-auto">
+          <% if(!currentUser) {%>
+            <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+            <a class="nav-link" href="/login"><b>Log In</b></a>
+          <% } else{%>
+            <a class="nav-link" href="/logout"><b>Log Out</b></a>
+            <% } %>
+        </div>
+    </div>
+</nav>
