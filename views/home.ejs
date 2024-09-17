@@ -2,8 +2,40 @@
 <body>
     <section class="bg-primary text-white text-center p-5">
         <div class="container">
-            <h1>Welcome to My Website</h1>
-            <p class="lead">This is a random home page.</p>
+            <h2>Project Overview</h2>
+            <p>This project is a user authentication system that allows users to sign up and log in using MongoDB, Express, and Node.js. The system ensures secure authentication and authorization, making use of Passport.js, a popular authentication middleware for Node.js.</p>
+
+            <h2>Technologies Used</h2>
+            <ul>
+                <li><strong>MongoDB:</strong> Used as the database to store user credentials and other necessary information. MongoDB provides a scalable and flexible data model for managing user details.</li>
+                <li><strong>Express.js:</strong> A lightweight and fast web application framework for Node.js, used for handling routing and HTTP requests/responses within the application.</li>
+                <li><strong>Node.js:</strong> A JavaScript runtime built on Chrome's V8 engine, used to build the server-side logic for handling user signup, login, and session management.</li>
+                <li><strong>Passport.js:</strong> A powerful middleware used for handling authentication and authorization. It supports a wide range of authentication strategies, such as local username/password authentication, OAuth, and others.</li>
+            </ul>
+
+            <h2>Features</h2>
+            <ul>
+                <li><strong>Sign Up:</strong> Users can create an account by providing their username, password, and other required details. Passwords are securely hashed using Passport.js strategies.</li>
+                <li><strong>Login:</strong> Registered users can log in using their credentials. Passport.js handles the authentication process and verifies the credentials securely.</li>
+                <li><strong>Session Management:</strong> After logging in, a session is created for the user. Sessions are securely maintained using Express-session and are managed using Passport.js.</li>
+                <li><strong>Authentication Middleware:</strong> Certain routes are protected and require users to be authenticated before accessing them. Passport.js helps enforce these rules, ensuring secure authorization.</li>
+            </ul>
+
+            <h2>How It Works</h2>
+            <p>The signup process involves storing the user's information in a MongoDB database, including a hashed version of their password. Passport.js uses the 'LocalStrategy' for username and password verification. When the user tries to log in, their credentials are verified, and upon success, they are granted access to the protected routes.</p>
+            <p>Express.js handles routing for login and signup, while Passport.js manages the entire authentication and authorization process. Sessions are stored in MongoDB, and cookie-based sessions ensure that authenticated users can stay logged in until they explicitly log out.</p>
+
+            <h2>Key Packages and Libraries</h2>
+            <ul>
+                <li><strong>mongoose:</strong> Used for connecting to MongoDB and defining schema models for user data.</li>
+                <li><strong>passport:</strong> Authentication middleware for handling various authentication strategies.</li>
+                <li><strong>passport-local:</strong> The local authentication strategy used to authenticate users with a username and password.</li>
+                <li><strong>express-session:</strong> Middleware for managing user sessions and cookies.</li>
+                <li><strong>bcrypt:</strong> Used to hash passwords securely before storing them in the database.</li>
+            </ul>
+
+            <h2>Conclusion</h2>
+            <p>This project is a robust implementation of a signup and login system that ensures security and scalability. By leveraging Passport.js and MongoDB, it creates a seamless and secure user authentication flow, essential for modern web applications.</p>
         </div>
     </section>
 </body>
